@@ -1,0 +1,23 @@
+<%= form_for @authentication do |f| %>
+  <% if @authentication.errors.any? %>
+    <ul>
+      <% @authentication.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
