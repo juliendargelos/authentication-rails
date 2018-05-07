@@ -11,7 +11,7 @@ module Authentication
         if public_attribute.present? && private_attribute.present? && !model&.authenticate(private_attribute)
           errors.add(:base,
             I18n.t(
-              "activerecord.errors.models.#{self.class.to_s.underscore.sub '/', '_'}.invalid",
+              "activerecord.errors.models.#{self.class.to_s.underscore}.invalid",
               default: I18n.t(
                 'activerecord.errors.messages.invalid',
                 default: I18n.t('errors.messages.invalid')
