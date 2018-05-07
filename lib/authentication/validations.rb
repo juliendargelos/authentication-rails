@@ -3,8 +3,6 @@ module Authentication
     extend ActiveSupport::Concern
 
     included do
-      validates :public_attribute, presence: true
-      validates :private_attribute, presence: true
       validate :succeed
 
       protected
